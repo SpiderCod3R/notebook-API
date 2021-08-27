@@ -43,3 +43,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Centralization of locale data collection for Ruby on Rails.
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
+
+
+# ActiveModel::Serializer implementation and Rails hooks
+gem 'active_model_serializers', '~> 0.10.12'

@@ -47,3 +47,6 @@ gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 
 # ActiveModel::Serializer implementation and Rails hooks
 gem 'active_model_serializers', '~> 0.10.12'
+
+# Process manager for applications with multiple components
+gem 'foreman', '~> 0.87.2'

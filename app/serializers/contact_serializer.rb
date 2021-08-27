@@ -2,7 +2,7 @@ class ContactSerializer < ActiveModel::Serializer
   attributes :id, :name, :email, :birthdate
 
   belongs_to :kind do
-    link(:kind) { kind_url(object.kind) }
+    link(:related) { kind_url(object.kind) }
   end
 
   has_many :phones
@@ -12,7 +12,7 @@ class ContactSerializer < ActiveModel::Serializer
     { "made-on": "UDEMY JACKSON PIRES - Desenvolvendo REST / RESTful APIs com Ruby on Rails" }
   end
 
-  link(:self) { contact_url(object) }
+  # link(:self) { contact_url(object) }
 
   def attributes(*args)
     h = super(*args)

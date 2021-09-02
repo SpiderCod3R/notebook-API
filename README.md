@@ -3,7 +3,7 @@
 **NOTEBOOK**-API  
 
 > Seguindo a Documentação Oficial do ```JSON APi```
-> Following the JSON API official documentation
+> Following the official JSON API documentation
 
 ### *SETUP*   
 ```ruby

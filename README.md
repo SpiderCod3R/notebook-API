@@ -3,6 +3,13 @@
 **NOTEBOOK**-API  
 
 > Seguindo a Documentação Oficial do ```JSON APi```
+> Following the JSON API official documentation
+
+### *SETUP*   
+```ruby
+  $> rails dev:setup  
+  $> foreman start
+```
 
 ### EXEMPLOS:
 

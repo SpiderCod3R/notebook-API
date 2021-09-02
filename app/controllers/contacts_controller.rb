@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  TOKEN = "34f83350b03742cd1"
+  # TOKEN = "15b552b25eaf4b741e501010006a108"
 
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
@@ -61,12 +61,14 @@ class ContactsController < ApplicationController
 
     def authenticate
       authenticate_or_request_with_http_token do |token, options|
+        secret_key = "34f83350b03742cd1"
+        _token_ = JWT.decode token, secret_key, true, { algorithm: 'HS256'}
         # Compare the tokens is a time-constant manner, to mitigate
         # Time Attack
-        ActiveSupport::SecurityUtils.secure_compare(
-          ::Digest::SHA256.hexdigest(token),
-          ::Digest::SHA256.hexdigest(TOKEN)
-        )
+        # ActiveSupport::SecurityUtils.secure_compare(
+        #   ::Digest::SHA256.hexdigest(token),
+        #   ::Digest::SHA256.hexdigest(TOKEN)
+        # )
       end
     end
 end

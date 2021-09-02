@@ -50,3 +50,5 @@ gem 'active_model_serializers', '~> 0.10.12'
 
 # Process manager for applications with multiple components
 gem 'foreman', '~> 0.87.2'
+
+gem 'jwt', '~> 2.2', '>= 2.2.3'

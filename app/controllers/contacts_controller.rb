@@ -1,4 +1,9 @@
 class ContactsController < ApplicationController
+  TOKEN = "34f83350b03742cd1"
+
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+
+  before_action :authenticate
   before_action :set_contact, only: [:show, :update, :destroy]
 
   # GET /contacts
@@ -52,5 +57,16 @@ class ContactsController < ApplicationController
       #   address_attributes: [:id, :street, :city]
       # )
       ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+    end
+
+    def authenticate
+      authenticate_or_request_with_http_token do |token, options|
+        # Compare the tokens is a time-constant manner, to mitigate
+        # Time Attack
+        ActiveSupport::SecurityUtils.secure_compare(
+          ::Digest::SHA256.hexdigest(token),
+          ::Digest::SHA256.hexdigest(TOKEN)
+        )
+      end
     end
 end

@@ -49,3 +49,17 @@
   }
 }
 ```
+
+- PHONES
+```json
+{
+	"data": 
+		{
+			"id": "191",
+			"type": "phones",
+			"attributes": {
+				"number": "999-888-777"
+			}
+		}
+}
+```

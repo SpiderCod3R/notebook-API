@@ -51,4 +51,7 @@ gem 'active_model_serializers', '~> 0.10.12'
 # Process manager for applications with multiple components
 gem 'foreman', '~> 0.87.2'
 
+# For porpuse of use token authentication
 gem 'jwt', '~> 2.2', '>= 2.2.3'
+gem 'devise_token_auth', '~> 1.2'
+gem 'devise-i18n', '~> 1.10'

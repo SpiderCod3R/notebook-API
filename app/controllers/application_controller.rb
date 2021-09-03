@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include DeviseTokenAuth::Concerns::SetUserByToken
   before_action :ensure_json_request
 
   # Não Aceita a requisição sem o HEADER FIELD na request

@@ -55,3 +55,6 @@ gem 'foreman', '~> 0.87.2'
 gem 'jwt', '~> 2.2', '>= 2.2.3'
 gem 'devise_token_auth', '~> 1.2'
 gem 'devise-i18n', '~> 1.10'
+
+# A plugin for versioning Rails based RESTful APIs.
+gem 'versionist', '~> 2.0', '>= 2.0.1'

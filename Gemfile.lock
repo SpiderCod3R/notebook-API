@@ -176,11 +176,16 @@ GEM
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    versionist (2.0.1)
+      activesupport (>= 3)
+      railties (>= 3)
+      yard (~> 0.9.20)
     warden (1.2.9)
       rack (>= 2.0.9)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    yard (0.9.26)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -204,6 +209,7 @@ DEPENDENCIES
   spring
   sqlite3 (~> 1.4)
   tzinfo-data
+  versionist (~> 2.0, >= 2.0.1)
 
 RUBY VERSION
    ruby 2.7.2p137

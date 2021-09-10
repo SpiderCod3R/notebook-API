@@ -63,4 +63,4 @@ gem 'versionist', '~> 2.0', '>= 2.0.1'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 
 # Link header pagination for Rails and Grape APIs
-gem 'api-pagination', '~> 4.8', '>= 4.8.2'
+# gem 'api-pagination', '~> 4.8', '>= 4.8.2'

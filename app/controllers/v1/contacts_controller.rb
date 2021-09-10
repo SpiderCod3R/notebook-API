@@ -1,5 +1,6 @@
 module V1
   class ContactsController < ApplicationController
+    include ErrorSerializer
     # before_action :authenticate_user!
     
     # TOKEN = "15b552b25eaf4b741e501010006a108"
@@ -30,7 +31,7 @@ module V1
       if @contact.save
         render json: @contact, include: [:kind, :phones, :address], status: :created, location: @contact
       else
-        render json: @contact.errors, status: :unprocessable_entity
+        render json: ErrorSerializer.serialize(@contact.errors), status: :unprocessable_entity
       end
     end
 
@@ -39,7 +40,7 @@ module V1
       if @contact.update(contact_params)
         render json: @contact, include: [:kind, :phones, :address]
       else
-        render json: @contact.errors, status: :unprocessable_entity
+        render json: ErrorSerializer.serialize(@contact.errors), status: :unprocessable_entity
       end
     end
 

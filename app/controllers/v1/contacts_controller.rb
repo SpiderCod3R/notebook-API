@@ -1,6 +1,6 @@
 module V1
   class ContactsController < ApplicationController
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     
     # TOKEN = "15b552b25eaf4b741e501010006a108"
     #include ActionController::HttpAuthentication::Token::ControllerMethods
@@ -9,9 +9,9 @@ module V1
 
     # GET /contacts
     def index
-      @contacts = Contact.all
+      @contacts = Contact.all.page(params[:page])
 
-      render json: @contacts
+      paginate json: @contacts
     end
 
     # GET /contacts/1

@@ -44,7 +44,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Centralization of locale data collection for Ruby on Rails.
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 
-
 # ActiveModel::Serializer implementation and Rails hooks
 gem 'active_model_serializers', '~> 0.10.12'
 
@@ -58,3 +57,10 @@ gem 'devise-i18n', '~> 1.10'
 
 # A plugin for versioning Rails based RESTful APIs.
 gem 'versionist', '~> 2.0', '>= 2.0.1'
+
+# Kaminari is a Scope & Engine based, clean, powerful, 
+# agnostic, customizable and sophisticated paginator for Rails 4+
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
+
+# Link header pagination for Rails and Grape APIs
+gem 'api-pagination', '~> 4.8', '>= 4.8.2'

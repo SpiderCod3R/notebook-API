@@ -5,7 +5,11 @@
 > Seguindo a Documentação Oficial do ```JSON APi```
 > Following the official JSON API documentation
 
-### *SETUP*   
+### *SETUP*
+```ruby
+  $> rails db:drop db:create db:migrate  
+```  
+##### *Antes de executar a task abaixo comentar o ```validates presence kind e address``` em contact.rb*
 ```ruby
   $> rails dev:setup  
   $> foreman start

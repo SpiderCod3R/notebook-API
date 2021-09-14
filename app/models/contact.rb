@@ -6,7 +6,7 @@ class Contact < ApplicationRecord
   accepts_nested_attributes_for :address, update_only: true
 
   # validations
-  validates :kind, :address, presence: true
+  # validates :kind, :address, presence: true
 
   def author
     "3D Academy"

@@ -24,7 +24,7 @@ module V1
     # GET /contacts/1
     def show
       if stale?(etag: @contact)
-        render json: @contact, include: [:kind, :phones, :address]
+        render json: @contact # include: [:kind, :phones, :address] Depende muito da RN aqui esta pelo serializer 
       end
     end
 

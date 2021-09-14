@@ -1,9 +1,9 @@
 namespace :dev do
   desc "CONFIGURA O AMBIENTE DE DESENVOLVIMENTO"
   task setup: :environment do
-    puts "Resetando o Banco de Dados"
-    %x(rails db:drop db:create db:migrate)
-    puts "Migrations Recriadas"
+    # puts "Resetando o Banco de Dados"
+    # %x(rails db:drop db:create db:migrate)
+    # puts "Migrations Recriadas"
 
     puts "Cadastrando Tipos"
     kinds = %w(Amigo Comercial Conhecido)

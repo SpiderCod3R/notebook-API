@@ -36,6 +36,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'pry-rails'
+  # rspec-rails is a testing framework for Rails 5+.
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -64,3 +66,4 @@ gem 'kaminari', '~> 1.2', '>= 1.2.1'
 
 # Link header pagination for Rails and Grape APIs
 # gem 'api-pagination', '~> 4.8', '>= 4.8.2'
+
